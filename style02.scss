@@ -1,0 +1,133 @@
+/* ——————VARIABLES———————— */
+
+/* COLOR */
+$colorBG: #FFFFFF;
+$colorBGLight: #F4F5F7;
+$colorTextBody: #232934;
+$colorTextSecondary: #6D7380;
+$colorTextHeadline: #0A0C0F;
+$colorInteractivePrimary: #0066FF;
+$colorInteractiveLight: #B9D5FF;
+$colorInteractiveSuperLight: #E7F1FF;
+$colorOutlines: #DADCDF;
+
+/* TYPE */
+$baseFontSize: 16px;
+$fontStack: "IBM Plex Mono", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+sans-serif;
+
+/* EFFECTS */
+$shadowDeep: 0 4px 8px rgba(27,39,51,0.08);
+$shadowSuperDeep: 0 16px 32px rgba(27,39,51,0.08);
+$shadowPopover: 0 0 0 1px rgba(99,114,130,0.16), 0 8px 16px rgba(27,39,51,0.08);
+$border-radius: 3px;
+
+
+
+body {
+	background: $colorBGLight;
+	font-family: $fontStack;
+	color: $colorTextBody;
+	font-size: $baseFontSize;
+	padding-bottom: 8rem;
+}
+
+.wrapper {
+	max-width: 40rem;
+	margin: 0 auto;
+	padding: 1rem;
+}
+
+h1, h2, h3 {
+	font-size: 1.1rem;
+	font-weight: bold;
+	color: $colorTextHeadline;
+	margin: 4rem 0 1rem;
+	line-height: 1.7;
+}
+
+h1 {
+	margin: 6rem auto 2rem;
+	text-align: center;
+}
+
+p, ol, ul {
+	margin: 1rem auto;
+	line-height: 1.8;
+	font-size: $baseFontSize;
+}
+
+.secondaryLink {
+	font-size: 0.8rem;
+	margin: 0;
+	vertical-align: super;
+}
+
+li {
+	margin: 1rem 0;
+	list-style-type: decimal;
+}
+
+a {
+	color: $colorInteractivePrimary;
+	text-decoration: none;
+
+	&:hover {
+		border-bottom: 1px $colorInteractivePrimary solid;
+	}
+
+}
+
+.intro {
+	text-align: center;
+}
+
+.center {
+	text-align: center;
+}
+
+.flexCenter {
+	display: inline-flex;
+	align-items: center;
+}
+
+button {
+	background: $colorInteractivePrimary;
+	color: $colorBG;
+	padding: .75rem 1.5rem;
+	font-size: 0.95rem;
+	font-family: $fontStack;
+	border-radius: $border-radius;
+	margin: 3rem auto 1rem;
+	display: inline-flex;
+	border: none;
+	transition: all 0.1s ease-in-out;
+	letter-spacing: 0.2px;
+	align-items: center;
+
+	img {
+		display: inline;
+		margin: 0 .5rem 0 -0.25rem;
+		transition: all 0.1s ease-in-out;
+
+	}
+
+	&:hover {
+		transform: scale(1.0) translateY(-1px);
+		opacity: 0.9;
+		cursor: pointer;
+
+		img {
+			transform: rotate(-5deg);
+		}
+
+	}
+}
+
+img {
+	max-width: 90%;
+	margin: 4rem auto;
+	display: block;
+	border-radius: $border-radius;
+	box-shadow: $shadowSuperDeep;
+}
